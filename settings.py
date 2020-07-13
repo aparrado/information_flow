@@ -19,9 +19,9 @@ SESSION_CONFIGS = [
     ),
 
         dict(
-        name='testing_plec',
+        name='testing_all',
         num_demo_participants=9,
-        app_sequence=['plec']
+        app_sequence=['smr','sec','plec']
     ),
 
         dict(
