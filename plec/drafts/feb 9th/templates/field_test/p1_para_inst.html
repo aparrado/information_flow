@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Paragraph Recall
+{% endblock %}
+
+{% block content %}
+
+
+    <p>
+For the next task, you will have 5 minutes to read a paragraph. After the 5 minutes are up, you will be presented with two short questions. Then, you will have X minutes to rewrite the paragraph as accurately as possible. Press "next" when you are ready to begin. 
+    </p>
+
+
+
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}
+
+

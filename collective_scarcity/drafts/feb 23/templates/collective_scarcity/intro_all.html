@@ -1,0 +1,17 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Introduction
+{% endblock %}
+
+{% block content %}
+<p>
+Thank you for participating in this study. The entire study should take approximately 45 minutes. It will include a few demographic questions and some activities where you will have to write. Please press "Next" to continue.
+</p>
+
+
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}

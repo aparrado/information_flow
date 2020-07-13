@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Paragraph Recall
+{% endblock %}
+
+{% block content %}
+
+
+
+    <p>
+{% formfield player.p4_para label="Please re-write the paragraph that you just read. Press next when you finish writing." %}
+
+    </p>
+
+
+
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}
+
+

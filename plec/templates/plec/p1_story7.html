@@ -1,0 +1,32 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Story 7
+{% endblock %}
+
+{% block content %}
+
+Please read the following story:
+
+    <p>
+In love, as in marriage, the rules emerge as you go along. 
+
+
+    </p>
+
+&nbsp;
+
+&nbsp;
+
+    <p>
+{% formfields%}
+
+    </p>
+    
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}
+
+

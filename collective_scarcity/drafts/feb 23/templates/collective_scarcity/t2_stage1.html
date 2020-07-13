@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Part 1
+{% endblock %}
+
+{% block content %}
+
+
+
+{% if player.treatment == "E" or player.treatment == "F" %}
+    <p>
+Describe four times in your life when you felt that you didn’t have enough of something or when resources were scarce.
+</p>
+
+ {% elif player.treatment == "G" or player.treatment == "H" %}
+ <p>
+Describe four things that you did during the last week.
+</p>
+ {% endif %}
+
+{% formfield player.t2_stage1 label="Please write your answer in the following field:" %}
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}

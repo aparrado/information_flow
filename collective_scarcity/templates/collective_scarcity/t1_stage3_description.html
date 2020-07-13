@@ -1,0 +1,36 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Part 3 - description
+{% endblock %}
+
+{% block content %}
+
+
+
+{% if player.treatment == "A" or player.treatment == "C" %}
+    <p>
+For this task, you'll be asked to come up with as many original and creative uses for a BRICK as you can. The goal is to come up with creative ideas, which are ideas that strike people as clever, unusual, interesting, uncommon, humorous, innovative, or different.
+
+Your ideas don't have to be practical or realistic; they can be silly or strange, so long as they are CREATIVE uses rather than ordinary uses.
+ 
+You can enter as many ideas as you like; just press ENTER after each one. The task will take 3 minutes. You can type in as many ideas as you like until then, but creative quality is more important than quantity. It's better to have a few really good ideas than a lot of uncreative ones.
+
+Please click on "Next" to begin.
+
+</p>
+
+{% elif player.treatment == "B" or player.treatment == "D" %}
+
+For this task, you will be asked to provide your thoughts on how to best solve a problem. The goal is to come up with what you think will be the most impactful and significant solution that you can. Remember that often the most impactful solutions to problems are the result of out-of-the-box thinking. You will have 15 minutes to complete this section.
+
+Please click on "Next" to begin.
+
+ {% endif %}
+ 
+
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Survey
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        Please indicate how much you agree with the following statements. The more you agree, the higher the number should be. Use the following scale to record your answers:
+    </p>
+
+<p>
+    <b>1</b> &nbsp; Very slightly or not at all &nbsp; &nbsp; &nbsp; &nbsp;
+    <b>2</b> &nbsp; A little &nbsp; &nbsp; &nbsp; &nbsp;
+    <b>3</b> &nbsp; Moderately &nbsp; &nbsp; &nbsp; &nbsp;
+    <b>4</b> &nbsp; Quite a bit &nbsp; &nbsp; &nbsp; &nbsp;
+    <b>5</b> &nbsp; Extremely &nbsp; &nbsp; &nbsp; &nbsp;
+</p>
+
+Please scroll all the way down and press "Next" when you are done.
+<p>
+
+</p>
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}

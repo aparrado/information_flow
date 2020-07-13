@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Part 1 - Instructions
+{% endblock %}
+
+{% block content %}
+{% if player.treatment == "I" or player.treatment == "J" %}
+		<p>
+        For this part of the study, you will start with <b>10 points</b>. You will be shown two images countaining dots. You will have five seconds to look at these images and then decide which image had the highest number of dots. At the end of the five seconds, you will be taken to a different screen. On this screen, you will select whether the image on the right or the picture on the left had more dots.
+        </p>
+{% elif player.treatment == "K" or player.treatment == "L" %}
+        <p>
+        For this part of the study, you will start with <b>1 point</b>. You will be shown two images countaining dots. You will have five seconds to look at these images and then decide which image had the highest number of dots. At the end of the five seconds, you will be taken to a different screen. On this screen, you will select whether the image on the right or the picture on the left had more dots.
+        </p>
+{% endif %}
+
+		<p>
+        If you get the question right, you will <b><font color="green"> receive 1 point</font></b>. If you get the question wrong, you will<b><font color="red"> lose 1 point</font></b>.
+   		</p>
+
+		<p>
+        You will repeat this process 10 times - 10 questions in total. <b>You can only proceed to the second part of the study if, at the end of the 10th time, you maintain a balance of at least 1 point. </b>
+    	</p>
+
+        <p>
+        Once you have read and understood the instructions, please press "next" to proceed.
+        </p>
+    
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}
+
+

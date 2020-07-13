@@ -1,0 +1,37 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Part 4
+{% endblock %}
+
+{% block content %}
+
+
+
+{% if player.treatment == "A" or player.treatment == "B" %}
+    <p>
+Imagine that your car is having some trouble, and requires a $1,500 service. Unfortunately, your auto insurance will cover only 10% of this cost. You now need to decide the following:
+(1)   Pay the full amount in cash. Would this require liquidating savings? How would you go about it?
+(2)   Take out a loan, which you can pay back in monthly installments. A typical such loan may require monthly payments of roughly $150 a month for 12 months, which would amount to about $1800 total.
+(3)   Take a chance, forego the service, and hope that the car lasts for a while longer. Of course, this leaves open the possibility of breakdown, or even greater expenses in the long run.
+How would you go about making this decision? Would it be an easy or a difficult decision for you to make?
+
+</p>
+
+ {% elif player.treatment == "C" or player.treatment == "D" %}
+ <p>
+ Imagine that your car is having some trouble, and requires a $150 service. Unfortunately, your auto insurance will cover only 10% of this cost. You now need to decide the following:
+(1)    Pay the full amount in cash. Would this require liquidating savings? How would you go about it?
+(2)   Take out a loan, which you can pay back in monthly installments. A typical such loan may require monthly payments of roughly $15 a month for 12 months, which would amount to about $180 total.
+(3)  Take a chance, forego the service, and hope that the car lasts for a while longer. Of course, this leaves open the possibility of breakdown, or even greater expenses in the long run.
+How would you go about making this decision? Would it be an easy or a difficult decision for you to make?
+
+</p>
+ {% endif %}
+
+{% formfield player.t1_stage4 label="Please write your answer in the following field:" %}
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Story 2
+{% endblock %}
+
+{% block content %}
+
+Please read the following story:
+
+    <p>
+On the first Monday in August a general meeting was called in the main room on the first floor. While I only expected to see colleagues from my department, it seemed everyone from the firm was there.  
+
+
+    </p>
+
+&nbsp;
+
+&nbsp;
+
+    <p>
+{% formfields%}
+
+    </p>
+    
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}
+
+

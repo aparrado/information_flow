@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Read the following sentence
+{% endblock %}
+
+{% block content %}
+
+
+    <p>
+Strong humans and wild animals cannot live happily together in one house.
+    </p>
+
+
+
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}

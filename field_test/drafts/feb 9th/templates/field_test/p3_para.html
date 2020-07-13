@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Paragraph Recall
+{% endblock %}
+
+{% block content %}
+
+Please read the following paragraph:
+
+    <p>
+{{paragraph}}
+    </p>
+
+
+
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}
+
+

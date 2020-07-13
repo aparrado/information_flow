@@ -1,0 +1,23 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Write one sentence
+{% endblock %}
+
+{% block content %}
+
+
+
+ <b>Story 4:</b> Given the circumstances, they were not about to give up without a fight. 
+
+<p> {% formfield player.p1_s4 label="Please write the next sentence of the story" %}</p>
+
+    </p>
+<p>
+Once you are done, press "Next" to continue </p>
+    {% next_button %}
+
+
+{{ form.errors }}
+{% endblock %}

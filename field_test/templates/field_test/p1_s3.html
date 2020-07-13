@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Write one sentence
+{% endblock %}
+
+{% block content %}
+
+
+
+ <b>Story 3:</b> On an exceptionally hot evening early in July, a young man came out of the attic in which he lodged and walked slowly, as though in hesitation, towards the bridge.
+<p> {% formfield player.p1_s3 label="Please write the next sentence of the story" %}</p>
+
+    </p>
+<p>
+Once you are done, press "Next" to continue </p>
+    {% next_button %}
+
+
+{{ form.errors }}
+{% endblock %}

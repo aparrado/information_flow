@@ -1,0 +1,57 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+
+
+
+
+
+{% block title %}
+Part 1 question 19 - Which side has more dots? 
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+    div img{ display: inline-block;}
+    .alignleft {
+        float: left;
+    }
+.alignright {
+    float: right;
+ #bottom { 
+                position:absolute;                  
+                bottom:0;                          
+                right:0;                          
+            } 
+}
+
+</style>
+
+<div id="textbox">
+<p class="alignleft">Left</p>
+<p class="alignright">Right</p>
+</div>
+
+
+<div style="clear: both;"></div>
+<div>
+ 
+    <img src="{% static "star_37.png" %}" style="width:45%" alt="" align="right" style="float:right"/>
+  
+    
+
+    <img src="{% static "star_38.png" %}" style="width:45%" alt="" align="left" style="float:left"/>
+    <div/>
+ 
+
+
+
+
+{% formfields %}
+
+    
+{% endblock %}
+
+

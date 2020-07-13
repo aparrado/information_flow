@@ -1,0 +1,30 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Survey
+{% endblock %}
+
+{% block content %}
+
+    <p>
+        This scale consists of a series of words that describe different feelings and emotions. Reach each item and then mark the appropriate answer in the space below to that word. Indicate to what extent you feel this way right now, that is, at the present moment. Use the following scale to record your answers:
+    </p>
+
+<p>
+    <b>1</b> &nbsp; Very slightly or not at all &nbsp; &nbsp; &nbsp; &nbsp;
+    <b>2</b> &nbsp; A little &nbsp; &nbsp; &nbsp; &nbsp;
+    <b>3</b> &nbsp; Moderately &nbsp; &nbsp; &nbsp; &nbsp;
+    <b>4</b> &nbsp; Quite a bit &nbsp; &nbsp; &nbsp; &nbsp;
+    <b>5</b> &nbsp; Extremely &nbsp; &nbsp; &nbsp; &nbsp;
+</p>
+
+Please scroll all the way down and press "Next" when you are done.
+<p>
+
+</p>
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+Part 1 question 30
+{% endblock %}
+
+{% block content %}
+
+{% if player.treatment == "I" or player.treatment == "J" %}
+	<p>
+        You got this question <b> <font color="green">right.</font></b> Your won one point. You now have <b> 10 points.</b> You can proceed to the next stage! Please press "Next" to continue.
+    </p>
+
+
+{% elif player.treatment == "K" or player.treatment == "L" %}
+	<p>
+        You got this question <b> <font color="green">right.</font></b> Your won one point. You now have <b> 1 point.</b> You can proceed to the next stage! Please press "Next" to continue. 
+    </p>
+ {% endif %}
+ <p>       
+ </p> 
+    {% formfields %}
+
+    {% next_button %}
+
+{% endblock %}
+
+

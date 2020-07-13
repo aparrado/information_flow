@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Story
+{% endblock %}
+
+{% block content %}
+
+Please read the following story:
+
+    <p>
+I went down to the front garden and went through the hole in the fence to get started with my day.
+
+    </p>
+
+&nbsp;
+
+&nbsp;
+
+    <p>
+{% formfields%}
+
+    </p>
+    
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}
+
+

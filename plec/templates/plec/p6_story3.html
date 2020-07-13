@@ -1,0 +1,32 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Story 3
+{% endblock %}
+
+{% block content %}
+
+Please read the following story:
+
+    <p>
+A few feet deeper into the forest, the crime scene unit found two black sneakers, a dark shirt, and a pair of black pants. The clothes' tattered condition suggested that they, like the skull and loose bones, had been removed from the body by scavengers. {{story_p1}}. {{story_p2}}. {{story_p3}}. {{story_p4}}. {{story_p5}}.
+
+
+    </p>
+
+&nbsp;
+
+&nbsp;
+
+    <p>
+{% formfields%}
+
+    </p>
+    
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}
+
+

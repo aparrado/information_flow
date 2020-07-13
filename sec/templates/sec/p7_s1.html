@@ -1,0 +1,24 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Write one sentence
+{% endblock %}
+
+{% block content %}
+
+
+    <p>
+ <b>Story 1:</b> {{story1}}
+    </p>
+<p> {% formfield player.p1_s1 label="Please write the next sentence of the story" %}</p>
+
+    <p>
+ Press "Next" to read the second story.
+    </p>
+
+
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Write
+{% endblock %}
+
+{% block content %}
+
+
+    <p>
+This is the page where you have to write
+    </p>
+
+
+    {% formfield player.p9_f label="Please re-write the sentence that you just read. Press next when you finish writing." %}
+
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}

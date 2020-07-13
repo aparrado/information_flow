@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+   Story
+{% endblock %}
+
+{% block content %}
+
+
+    <p>
+For the next task, you will have 5 minutes to read a story and write one additional sentence. Press "next" when you are ready to begin. 
+    </p>
+
+
+
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}
+
+

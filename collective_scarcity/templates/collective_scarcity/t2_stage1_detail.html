@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Part 1
+{% endblock %}
+
+{% block content %}
+
+
+
+{% if player.treatment == "E" or player.treatment == "F" %}
+    <p>
+Pick one of the episodes you mentioned in the previous screen and describe it in detail, explaining what was lacking and what you experienced.
+</p>
+
+ {% elif player.treatment == "G" or player.treatment == "H" %}
+ <p>
+Pick one of the things you mentioned in the previous screen and describe it in detail, explaining what you did and experienced.
+</p>
+ {% endif %}
+
+{% formfield player.t2_stage1_detail label="Please write your answer in the following field:" %}
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}

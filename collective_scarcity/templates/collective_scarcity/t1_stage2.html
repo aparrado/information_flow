@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Part 2
+{% endblock %}
+
+{% block content %}
+
+
+
+{% if player.treatment == "A" or player.treatment == "B" %}
+    <p>
+Imagine that an unforeseen event requires of you an immediate $2,000 expense. Are there ways in which you may be able to come up with that amount of money on a very short notice? How would you go about it? Would it cause you long-lasting financial hardship? Would it require you to make sacrifices that have long-term consequences? If so, what kind of sacrifices?
+</p>
+
+ {% elif player.treatment == "C" or player.treatment == "D" %}
+ <p>
+ Imagine that an unforeseen event requires of you an immediate $200 expense. Are there ways in which you may be able to come up with that amount of money on a very short notice? How would you go about it? Would it cause you long-lasting financial hardship? Would it require you to make sacrifices that have long-term consequences? If so, what kind of sacrifices?
+</p>
+ {% endif %}
+
+{% formfield player.t1_stage2 label="Please write your answer in the following field:" %}
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}

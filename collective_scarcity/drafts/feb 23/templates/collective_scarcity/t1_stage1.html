@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Part 1
+{% endblock %}
+
+{% block content %}
+
+
+
+{% if player.treatment == "A" or player.treatment == "B" %}
+    <p>
+The economy is going through difficult times; suppose your employer needs to make substantial budget cuts. Imagine a scenario in which you received a 15% cut in your salary. Given your situation, would you be able to maintain roughly your same lifestyle under those new circumstances? If not, what changes would you need to make? Would it impact your leisure, housing, or travel plans?
+</p>
+
+ {% elif player.treatment == "C" or player.treatment == "D" %}
+ <p>
+ The economy is going through difficult times; suppose your employer needs to make substantial budget cuts. Imagine a scenario in which you received a 5% cut in your salary. Given your situation, would you be able to maintain roughly your same lifestyle under those new circumstances? If not, what changes would you need to make? Would it impact your leisure, housing, or travel plans?
+</p>
+ {% endif %}
+
+{% formfield player.t1_stage1 label="Please write your answer in the following field:" %}
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}

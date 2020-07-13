@@ -1,0 +1,32 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Story 4
+{% endblock %}
+
+{% block content %}
+
+Please read the following story:
+
+    <p>
+While the commission was deciding my fate, I decided to run away, as I had been informed that things would not go in my favor. {{story_p1}}. {{story_p2}}. {{story_p3}}. {{story_p4}}. 
+
+
+    </p>
+
+&nbsp;
+
+&nbsp;
+
+    <p>
+{% formfields%}
+
+    </p>
+    
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}
+
+

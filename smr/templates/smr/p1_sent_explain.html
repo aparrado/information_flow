@@ -1,0 +1,22 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Instructions
+{% endblock %}
+
+{% block content %}
+
+
+    <p>
+For the next task, you will have five seconds to read a sentence. Then there will be a 5 second break, after which you will have to write the sentence that you have just read. Please write the sentence as closely to the original as possible. You will repeat this process 10 times before proceeding to the next task. When you are ready to begin, please press "next".
+    </p>
+
+
+
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}
+
+

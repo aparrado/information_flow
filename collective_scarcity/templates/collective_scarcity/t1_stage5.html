@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Part 5
+{% endblock %}
+
+{% block content %}
+
+
+
+{% if player.treatment == "A" or player.treatment == "B" %}
+    <p>
+Suppose you have reached the point where you must replace your old refrigerator. The model you plan to buy offers two alternative financing options: (1) You can pay the full amount in cash, which will cost you $999. (2) You can pay in 12 monthly payments, of $100 each, which would amount to a total of $1200. Which financing option would you opt for? Would you have the necessary cash on hand? Would the interest be worth paying in this case?
+</p>
+
+ {% elif player.treatment == "C" or player.treatment == "D" %}
+ <p>
+Suppose you have reached the point where you must replace your old refrigerator. The model you plan to buy offers two alternative financing options: (1) You can pay the full amount in cash, which will cost you $399. (2) You can pay in 12 monthly payments, of $40 each, which would amount to a total of $480. Which financing option would you opt for? Would you have the necessary cash on hand? Would the interest be worth paying in this case?
+</p>
+ {% endif %}
+
+{% formfield player.t1_stage5 label="Please write your answer in the following field:" %}
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}

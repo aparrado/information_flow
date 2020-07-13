@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Write
+{% endblock %}
+
+{% block content %}
+
+
+    <p>
+This is the page where you have to write
+    </p>
+
+{% if player.id_in_group == 1 %}
+    <p>
+    {% formfield player.r1 label="Write based on what you have read a" %}
+ {% elif player.id_in_group == 2 %}
+ 	{% formfield player.r1 label="Write based on what you have read b" %}
+ {% else %}
+    {% formfield player.r1 label="Write based on what you have read c" %}
+ {% endif %}
+
+    {% next_button %}
+
+{{ form.errors }}
+{% endblock %}
